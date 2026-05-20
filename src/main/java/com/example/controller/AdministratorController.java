@@ -41,6 +41,7 @@ public class AdministratorController {
      * 管理者情報を登録する.
      *
      * @param form 管理者情報登録時に使用するフォーム
+     * @return ログイン画面
      */
     @PostMapping("/insert")
     public String insert(InsertAdministratorForm form) {
@@ -54,6 +55,7 @@ public class AdministratorController {
      * ログイン画面にフォワードする.
      *
      * @param form ログイン時に使用するフォーム
+     * @return ログイン画面
      */
     @GetMapping("/")
     public String toLogin(LoginForm form) {
@@ -79,5 +81,18 @@ public class AdministratorController {
         session.setAttribute("administratorName", administrator.getName());
 
         return "redirect:/employee/show-list";
+    }
+
+    /**
+     * ログアウト.
+     *
+     * @param form フォーム
+     * @return ログイン画面
+     */
+    @GetMapping("/logout")
+    public String logout(LoginForm form) {
+        session.invalidate();
+
+        return "redirect:/";
     }
 }
