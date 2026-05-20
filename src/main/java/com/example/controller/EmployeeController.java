@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.Employee;
+import com.example.form.UpdateEmployeeForm;
 import com.example.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,5 +33,22 @@ public class EmployeeController {
         model.addAttribute("employeeList", employeeList);
 
         return "employee/list";
+    }
+
+    /**
+     * 従業員IDをもとに従業員情報を取得.
+     *
+     * @param id    従業員id
+     * @param model 従業員情報格納用リクエストスコープ
+     * @param form  フォーム
+     * @return 従業員情報画面
+     */
+    @GetMapping("/show-detail")
+    public String showDetail(String id, Model model, UpdateEmployeeForm form) {
+        Employee employee = employeeService.showDetail(Integer.parseInt(id));
+
+        model.addAttribute("employee", employee);
+
+        return "employee/detail";
     }
 }
