@@ -49,11 +49,12 @@ public class AdministratorRepository {
     public Administrator findByMailAddressAndPassword(String mailAddress, String password) {
         String sql = """
                 SELECT
-                    id,name,mailAddress,password
+                    id,name,mail_address,password
                 FROM
                     administrators
                 WHERE
-                    mail_address = :mailAddress,
+                    mail_address = :mailAddress
+                    AND
                     password = :password
                 """;
 

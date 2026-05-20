@@ -29,7 +29,7 @@ public class AdministratorController {
      */
     @GetMapping("/to-insert")
     public String toInsert(InsertAdministratorForm form) {
-        return "administrator/insert.html";
+        return "administrator/insert";
     }
 
     /*
@@ -52,7 +52,7 @@ public class AdministratorController {
      */
     @GetMapping("/")
     public String toLogin(LoginForm form) {
-        return "administrator/login.html";
+        return "administrator/login";
     }
 
     @PostMapping("/login")
@@ -61,11 +61,11 @@ public class AdministratorController {
 
         if (administrator == null) {
             model.addAttribute("error", "メールアドレスまたはパスワードが不正です");
-            return "/";
+            return "administrator/login";
         }
 
         session.setAttribute("administratorName", administrator.getName());
-        
+
         return "redirect:/employee/show-list";
     }
 }
