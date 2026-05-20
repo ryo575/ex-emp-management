@@ -124,7 +124,7 @@ public class EmployeeRepository {
                     mail_address = :mailAddress,
                     zip_code = :zipCode,
                     address = :address,
-                    telephone - :telephone,
+                    telephone = :telephone,
                     salary = :salary,
                     characteristics = :characteristics,
                     dependents_count = :dependentsCount

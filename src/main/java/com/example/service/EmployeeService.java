@@ -41,4 +41,17 @@ public class EmployeeService {
 
         return employee;
     }
+
+    /**
+     * 従業員情報を更新する
+     *
+     * @param employeeId 従業員ID
+     * @param newCount   更新する扶養人数
+     */
+    public void updateDependentsCount(Integer employeeId, Integer newCount) {
+        Employee employee = employeeRepository.findById(employeeId);
+
+        employee.setDependentsCount(newCount);
+        employeeRepository.update(employee);
+    }
 }
