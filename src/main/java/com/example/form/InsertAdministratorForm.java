@@ -8,18 +8,22 @@ import lombok.ToString;
 @Setter
 @ToString
 
+/**
+ * 管理者登録時に使用するフォーム
+ */
+
 public class InsertAdministratorForm {
 
-    /*
-    名前
+    /**
+     * 名前
      */
     private String name;
-    /*
-    メールアドレス
+    /**
+     * メールアドレス
      */
     private String mailAddress;
-    /*
-    パスワード
+    /**
+     * パスワード
      */
     private String password;
 }

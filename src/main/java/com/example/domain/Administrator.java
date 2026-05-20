@@ -8,21 +8,25 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
+/**
+ * 管理者を表すクラスです
+ */
+
 public class Administrator {
-    /*
-    従業員ID
+    /**
+     * 従業員ID
      */
     private Integer id;
-    /*
-    名前
+    /**
+     * 名前
      */
     private String name;
-    /*
-    メールアドレス
+    /**
+     * メールアドレス
      */
     private String mailAddress;
-    /*
-    パスワード
+    /**
+     * パスワード
      */
     private String password;
 }

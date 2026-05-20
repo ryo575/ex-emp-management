@@ -8,14 +8,17 @@ import lombok.ToString;
 @Setter
 @ToString
 
+/**
+ * ログイン時に使用するフォーム
+ */
 public class LoginForm {
-    /*
-    メールアドレス
+    /**
+     * メールアドレス
      */
     private String mailAddress;
 
-    /*
-    パスワード
+    /**
+     * パスワード
      */
     private String password;
 }

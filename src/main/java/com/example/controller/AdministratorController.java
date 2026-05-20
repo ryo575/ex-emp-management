@@ -15,6 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
+
+/**
+ * 管理者関連機能の処理の制御を行うコントローラ
+ */
 public class AdministratorController {
     @Autowired
     private AdministratorService administratorService;
@@ -22,20 +26,20 @@ public class AdministratorController {
     @Autowired
     private HttpSession session;
 
-    /*
-        insert.htmlにフォワードする処理
-
-        @param InsertAdministrationForm form
+    /**
+     * insert.htmlにフォワードする処理
+     *
+     * @param form 管理者情報登録時に使用するフォーム
      */
     @GetMapping("/to-insert")
     public String toInsert(InsertAdministratorForm form) {
         return "administrator/insert";
     }
 
-    /*
-    管理者情報を登録する.
-
-    @param InsertAdministrationForm form
+    /**
+     * 管理者情報を登録する.
+     *
+     * @param form 管理者情報登録時に使用するフォーム
      */
     @PostMapping("/insert")
     public String insert(InsertAdministratorForm form) {
@@ -45,16 +49,23 @@ public class AdministratorController {
         return "redirect:/";
     }
 
-    /*
-    ログイン画面にフォワードする
-
-    @param LoginForm form
+    /**
+     * ログイン画面にフォワードする
+     *
+     * @param form ログイン時に使用するフォーム
      */
     @GetMapping("/")
     public String toLogin(LoginForm form) {
         return "administrator/login";
     }
 
+    /**
+     * ログイン処理を行う
+     *
+     * @param form  ログイン時に使用するフォーム
+     * @param model エラーメッセージ格納用のリクエストスコープ
+     * @return 失敗時は再度ログイン画面へ、成功時は顧客リストへ
+     */
     @PostMapping("/login")
     public String login(LoginForm form, Model model) {
         Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
