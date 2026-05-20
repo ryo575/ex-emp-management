@@ -6,19 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
-@Transactional
-
 /**
- * 管理者関連機能の業務処理を行うサービス
+ * 管理者関連機能の業務処理を行うサービス.
  */
 
+@Service
+@Transactional
 public class AdministratorService {
     @Autowired
     private AdministratorRepository administratorRepository;
 
     /**
-     * 管理者情報を挿入する
+     * 管理者情報を挿入.
      *
      * @param administrator 追加したい管理者
      */
@@ -27,7 +26,7 @@ public class AdministratorService {
     }
 
     /**
-     * ログイン処理を行う
+     * ログイン処理を行う.
      *
      * @param mailAddress ログインしたい管理者のメールアドレス
      * @param password    ログインしたい管理者のパスワード

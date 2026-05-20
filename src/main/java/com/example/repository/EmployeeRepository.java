@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * employeesテーブルを操作するリポジトリー
+ * employeesテーブルを操作するリポジトリー.
  */
 
 @Repository
@@ -38,10 +38,10 @@ public class EmployeeRepository {
     };
 
     /**
-     * 従業員一覧情報を入社日順（降順）で取得する
+     * 従業員一覧情報を入社日順（降順）で取得する.
      * （従業員が存在しない場合はサイズ0件の従業員一覧を返す）
      *
-     * @return 前従業員一覧
+     * @return すべての従業員一覧
      */
     public List<Employee> findAll() {
         String sql = """
@@ -70,7 +70,7 @@ public class EmployeeRepository {
     }
 
     /**
-     * 主キーから従業員情報を取得する
+     * 主キーから従業員情報を取得する.
      * 従業員が存在しない場合にはSpringが例外を発生します
      *
      * @param id 取得したい従業員のid
@@ -106,7 +106,7 @@ public class EmployeeRepository {
     }
 
     /**
-     * 従業員情報を変更する
+     * 従業員情報を変更する.
      * (idカラムを除いた従業員情報のすべてのカラムを更新できるようなSQLを発行する)
      *
      * @param employee 変更したい従業員情報

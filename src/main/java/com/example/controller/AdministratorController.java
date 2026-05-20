@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * 管理者関連機能の処理の制御を行うコントローラ.
+ */
+
 @Controller
 @RequestMapping("/")
-
-/**
- * 管理者関連機能の処理の制御を行うコントローラ
- */
 public class AdministratorController {
     @Autowired
     private AdministratorService administratorService;
@@ -27,9 +27,10 @@ public class AdministratorController {
     private HttpSession session;
 
     /**
-     * insert.htmlにフォワードする処理
+     * 管理者登録画面を表示する.
      *
-     * @param form 管理者情報登録時に使用するフォーム
+     * @param form フォーム
+     * @return 管理者登録画面
      */
     @GetMapping("/to-insert")
     public String toInsert(InsertAdministratorForm form) {
@@ -50,7 +51,7 @@ public class AdministratorController {
     }
 
     /**
-     * ログイン画面にフォワードする
+     * ログイン画面にフォワードする.
      *
      * @param form ログイン時に使用するフォーム
      */
@@ -60,7 +61,7 @@ public class AdministratorController {
     }
 
     /**
-     * ログイン処理を行う
+     * ログイン処理を行う.
      *
      * @param form  ログイン時に使用するフォーム
      * @param model エラーメッセージ格納用のリクエストスコープ

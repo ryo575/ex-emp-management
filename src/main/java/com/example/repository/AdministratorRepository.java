@@ -11,12 +11,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-
 /**
- * administratorsテーブルを操作するリポジトリー
+ * administratorsテーブルを操作するリポジトリー.
  *
  */
+
+@Repository
 public class AdministratorRepository {
 
     @Autowired
@@ -32,7 +32,7 @@ public class AdministratorRepository {
     };
 
     /**
-     * 管理者情報を挿入する
+     * 管理者情報を挿入.
      *
      * @param administrator 挿入したい管理者の情報
      */
@@ -46,7 +46,7 @@ public class AdministratorRepository {
     }
 
     /**
-     * メールアドレスとパスワードから管理者情報を取得する（1件も存在しない場合はnullを返す）
+     * メールアドレスとパスワードから管理者情報を取得する（1件も存在しない場合はnullを返す）.
      *
      * @param mailAddress 取得したい管理者のメールアドレス
      * @param password    取得したい管理者のパスワード

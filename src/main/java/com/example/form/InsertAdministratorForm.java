@@ -4,14 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * 管理者登録時に使用するフォーム.
+ */
+
 @Getter
 @Setter
 @ToString
-
-/**
- * 管理者登録時に使用するフォーム
- */
-
 public class InsertAdministratorForm {
 
     /**

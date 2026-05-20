@@ -4,15 +4,15 @@ import lombok.*;
 
 import java.util.Date;
 
+/**
+ * 従業員を表すドメインです.
+ */
+
 @Getter
 @Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-/**
- * 従業員を表すクラスです
- */
-
 public class Employee {
     /**
      * ID

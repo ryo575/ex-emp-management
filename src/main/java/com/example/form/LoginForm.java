@@ -4,13 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * ログイン時に使用するフォーム.
+ */
+
 @Getter
 @Setter
 @ToString
-
-/**
- * ログイン時に使用するフォーム
- */
 public class LoginForm {
     /**
      * メールアドレス
