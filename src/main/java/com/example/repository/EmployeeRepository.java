@@ -14,7 +14,6 @@ import java.util.List;
 /**
  * employeesテーブルを操作するリポジトリー.
  */
-
 @Repository
 public class EmployeeRepository {
     @Autowired
@@ -73,8 +72,8 @@ public class EmployeeRepository {
      * 主キーから従業員情報を取得する.
      * 従業員が存在しない場合にはSpringが例外を発生します
      *
-     * @param id 取得したい従業員のid
-     * @return　選択された従業員情報
+     * @param id ID
+     * @return 従業員情報
      */
     public Employee findById(Integer id) {
         String sql = """

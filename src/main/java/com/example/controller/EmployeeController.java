@@ -15,7 +15,6 @@ import java.util.List;
 /**
  * 従業員情報を検索する処理を行う.
  */
-
 @Controller
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -40,7 +39,7 @@ public class EmployeeController {
      * 従業員IDをもとに従業員情報を取得.
      *
      * @param id    従業員id
-     * @param model 従業員情報格納用リクエストスコープ
+     * @param model リクエストスコープ
      * @param form  フォーム
      * @return 従業員情報画面
      */

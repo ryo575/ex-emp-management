@@ -11,7 +11,6 @@ import java.util.List;
 /**
  * 従業員情報一覧を全件検索する業務処理を行う.
  */
-
 @Service
 @Transactional
 public class EmployeeService {
@@ -43,7 +42,7 @@ public class EmployeeService {
     }
 
     /**
-     * 従業員情報を更新する
+     * 従業員情報を更新する.
      *
      * @param employeeId 従業員ID
      * @param newCount   更新する扶養人数
