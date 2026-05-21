@@ -50,7 +50,7 @@ public class AdministratorController {
                          BindingResult result,
                          RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
-            return "/to-insert";
+            return "administrator/insert";
         }
 
         Administrator administrator = new Administrator();
@@ -83,7 +83,7 @@ public class AdministratorController {
                         RedirectAttributes redirectAttributes,
                         Model model) {
         if (result.hasErrors()) {
-            return "/";
+            return "administrator/login";
         }
 
         Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
